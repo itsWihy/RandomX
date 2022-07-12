@@ -1,9 +1,3 @@
-// /fly (enable config)
-// /staffchat (enable config)
-
-
-// auto gaming config
-// permission gaming
 
 package wihy.randomx;
 
