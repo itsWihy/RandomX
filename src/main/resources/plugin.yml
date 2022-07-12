@@ -1,0 +1,17 @@
+name: RandomX
+version: '${project.version}'
+main: wihy.randomx.Main
+api-version: 1.18
+authors: [ Wihy ]
+description: an all in one plugin for Minecraft! essential for every minecraft server!
+
+commands:
+  a:
+    usage: /a
+    description: AAA
+  tpa:
+    usage: /tpa <text>
+    description: /tpa
+  tpaccept:
+    usage: /tpaccept
+    description: /tpaccept
