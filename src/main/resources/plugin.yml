@@ -15,3 +15,6 @@ commands:
   tpaccept:
     usage: /tpaccept
     description: /tpaccept
+  tplist:
+    usage: /tplist
+    description: /tplist

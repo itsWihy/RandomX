@@ -7,13 +7,20 @@ import org.bukkit.entity.Damageable;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
+import org.bukkit.event.player.AsyncPlayerChatEvent;
 import wihy.randomx.Main;
 import wihy.randomx.util;
 
+import java.text.DecimalFormat;
 import java.util.Objects;
+import java.util.Random;
 
 public class dmg implements Listener {
+
+    private static final DecimalFormat df = new DecimalFormat("0.0");
+
     @EventHandler
     public void onDamage(EntityDamageByEntityEvent event) {
         if(event.getDamager() instanceof Player) {
@@ -26,13 +33,16 @@ public class dmg implements Listener {
 
             String fColor = "&" + util.getRandom(color);
 
-            as.setCustomName(ChatColor.translateAlternateColorCodes('&', fColor + "" + event.getDamage() + fColor + "" + "DMG"));
-            as.setCustomNameVisible(true);
 
+
+            as.setCustomName(ChatColor.translateAlternateColorCodes('&', fColor + "" + df.format(event.getDamage()) + fColor + "" + "DMG"));
+            as.setCustomNameVisible(true);
+            long integer = 1L;
             for(int i = 0; i < 11; i++) {
-                Bukkit.getScheduler().runTaskLater(Main.getPlugin(), () -> as.teleport(as.getLocation().add(0, 0.11, 0)), 2L);
+                integer++;
+                Bukkit.getScheduler().runTaskLater(Main.getPlugin(), () -> as.teleport(as.getLocation().add(0, 0.11, 0)), integer);
             }
-            as.damage(128518258, as.getKiller());
+            Bukkit.getScheduler().runTaskLater(Main.getPlugin(), as::remove, 40L);
         }
     }
 }
