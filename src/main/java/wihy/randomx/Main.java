@@ -4,6 +4,7 @@ package wihy.randomx;
 import org.bukkit.plugin.java.JavaPlugin;
 import wihy.randomx.commands.a;
 import wihy.randomx.commands.tpa;
+import wihy.randomx.listeners.dmg;
 
 import java.util.Objects;
 
@@ -20,6 +21,7 @@ public final class Main extends JavaPlugin {
         Objects.requireNonNull(getCommand("tpa")).setExecutor(new tpa());
         Objects.requireNonNull(getCommand("a")).setExecutor(new a());
 
+        getServer().getPluginManager().registerEvents(new wihy.randomx.listeners.dmg(), this);
         getServer().getPluginManager().registerEvents(new wihy.randomx.listeners.tpa(), this);
 
     }
