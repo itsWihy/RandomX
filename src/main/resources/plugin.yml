@@ -6,9 +6,6 @@ authors: [ Wihy ]
 description: an all in one plugin for Minecraft! essential for every minecraft server!
 
 commands:
-  a:
-    usage: /a
-    description: AAA
   tpa:
     usage: /tpa <text>
     description: /tpa
@@ -18,3 +15,5 @@ commands:
   tplist:
     usage: /tplist
     description: /tplist
+  builder:
+    usage: /builder

@@ -1,6 +1,5 @@
 package wihy.randomx.commands;
 
-import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandException;
 import org.bukkit.command.CommandExecutor;
@@ -8,10 +7,9 @@ import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 import wihy.randomx.Main;
 
-import java.io.IOException;
 import java.util.HashMap;
 
-import static wihy.randomx.commands.util.color;
+import static wihy.randomx.util.color;
 
 public class tpa implements CommandExecutor {
     public HashMap<String, Long> cooldowns = new HashMap<String, Long>();

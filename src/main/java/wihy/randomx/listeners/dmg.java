@@ -3,19 +3,15 @@ package wihy.randomx.listeners;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.ArmorStand;
-import org.bukkit.entity.Damageable;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
-import org.bukkit.event.player.AsyncPlayerChatEvent;
 import wihy.randomx.Main;
 import wihy.randomx.util;
 
 import java.text.DecimalFormat;
 import java.util.Objects;
-import java.util.Random;
 
 public class dmg implements Listener {
 

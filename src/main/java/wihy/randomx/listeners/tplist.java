@@ -2,7 +2,7 @@ package wihy.randomx.listeners;
 
 
 import org.bukkit.Bukkit;
-import org.bukkit.Material;
+
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -11,7 +11,7 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 
 import java.util.Objects;
 
-import static wihy.randomx.commands.util.color;
+import static wihy.randomx.util.color;
 
 public class tplist implements Listener {
     @EventHandler
